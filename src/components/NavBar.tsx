@@ -34,7 +34,7 @@ function NavBar() {
     >
       <Navbar.Brand href="#home">
         <img
-          src="../src/images/logo.png"
+          src="./src/images/logo.png"
           style={{
             maxWidth: "100%",
             maxHeight: "40px",
@@ -51,6 +51,10 @@ function NavBar() {
         <Nav.Link href="#prices">Prices</Nav.Link>
         {/* <Nav.Link href="#testimonials">Testimonials</Nav.Link> */}
         <Nav.Link href="#contact">Contact</Nav.Link>
+        <img src="./src/images/logo.png"></img>
+        <img src="src/images/logo.png"></img>
+        <img src="./images/logo.png"></img>
+        <img src="/images/logo.png"></img>
       </Nav>
     </Navbar>
   );
