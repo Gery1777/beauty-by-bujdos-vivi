@@ -1,3 +1,4 @@
+import testimonials1 from "../images/testimonials-1.jpg";
 function About() {
   return (
     <>
@@ -17,7 +18,7 @@ function About() {
           <div className="col-lg-4">
             <img
               className="img-fluid rounded-circle mb-3"
-              src="./images/testimonials-1.jpg"
+              src={testimonials1}
               alt="..."
             />
           </div>

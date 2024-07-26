@@ -10,7 +10,7 @@ function ShowCase() {
           <div
             className="col-lg-6 order-lg-2 text-white showcase-img"
             style={{
-              backgroundImage: "url(../images/bg-showcase-1.jpg)",
+              backgroundImage: `url(${bgShowcase1})`,
             }}
           ></div>
           <div className="col-lg-6 order-lg-1 my-auto showcase-text">
@@ -28,7 +28,7 @@ function ShowCase() {
           <div
             className="col-lg-6 text-white showcase-img"
             style={{
-              backgroundImage: "url(./images/bg-showcase-2.jpg)",
+              backgroundImage: `url(${bgShowcase2})`,
             }}
           ></div>
           <div className="col-lg-6 my-auto showcase-text">
@@ -46,7 +46,7 @@ function ShowCase() {
           <div
             className="col-lg-6 order-lg-2 text-white showcase-img"
             style={{
-              backgroundImage: "url(./images/bg-showcase-3.jpg)",
+              backgroundImage: `url(${bgShowcase3})`,
             }}
           ></div>
           <div className="col-lg-6 order-lg-1 my-auto showcase-text">
