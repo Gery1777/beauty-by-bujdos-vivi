@@ -79,7 +79,7 @@ const App = () => {
       {/* <section className="testimonials text-center" id="testimonials">
         <Testimonials></Testimonials>
       </section> */}
-      {/* <!-- Contact--> */}
+      {/* <!-- Contact--git> */}
       <section className="contact text-white text-center" id="contact">
         <Contact></Contact>
       </section>
