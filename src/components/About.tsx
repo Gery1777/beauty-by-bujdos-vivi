@@ -17,7 +17,7 @@ function About() {
           <div className="col-lg-4">
             <img
               className="img-fluid rounded-circle mb-3"
-              src="./src/images/testimonials-1.jpg"
+              src="./images/testimonials-1.jpg"
               alt="..."
             />
           </div>

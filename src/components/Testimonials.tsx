@@ -8,7 +8,7 @@ function Testimonials() {
             <div className="testimonial-item mx-auto mb-5 mb-lg-0">
               <img
                 className="img-fluid rounded-circle mb-3"
-                src="./src/images/cartoon-woman.jpg"
+                src="./images/cartoon-woman.jpg"
                 alt="..."
               />
               <h5>Margaret E.</h5>
@@ -21,7 +21,7 @@ function Testimonials() {
             <div className="testimonial-item mx-auto mb-5 mb-lg-0">
               <img
                 className="img-fluid rounded-circle mb-3"
-                src="./src/images/cartoon-woman.jpg"
+                src="./images/cartoon-woman.jpg"
                 alt="..."
               />
               <h5>Fred S.</h5>
@@ -35,7 +35,7 @@ function Testimonials() {
             <div className="testimonial-item mx-auto mb-5 mb-lg-0">
               <img
                 className="img-fluid rounded-circle mb-3"
-                src="./src/images/cartoon-woman.jpg"
+                src="./images/cartoon-woman.jpg"
                 alt="..."
               />
               <h5>Sarah W.</h5>
