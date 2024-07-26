@@ -34,7 +34,7 @@ function NavBar() {
     >
       <Navbar.Brand href="#home">
         <img
-          src="src/images/logo.png"
+          src="../src/images/logo.png"
           style={{
             maxWidth: "100%",
             maxHeight: "40px",
