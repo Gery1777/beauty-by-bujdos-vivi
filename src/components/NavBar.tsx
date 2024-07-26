@@ -51,10 +51,14 @@ function NavBar() {
         <Nav.Link href="#prices">Prices</Nav.Link>
         {/* <Nav.Link href="#testimonials">Testimonials</Nav.Link> */}
         <Nav.Link href="#contact">Contact</Nav.Link>
+        <img src="../src/images/logo.png"></img>
         <img src="./src/images/logo.png"></img>
         <img src="src/images/logo.png"></img>
+        <img src="../images/logo.png"></img>
         <img src="./images/logo.png"></img>
         <img src="/images/logo.png"></img>
+        <img src="/logo.png"></img>
+        <img src="./logo.png"></img>
       </Nav>
     </Navbar>
   );
