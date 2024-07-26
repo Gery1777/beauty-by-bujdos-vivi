@@ -1,0 +1,29 @@
+:root{
+    --bc-navbar-primary:rgb(244, 228, 206) ;
+    --bc-navbar-secondary:rgb(255,255,255);
+    --bc-navbar-shadow:rgb(244, 228, 206,50%)
+  }
+  /*NavBar.tsx*/
+  .bg-light-nav {
+      /* background-image: linear-gradient(to right,rgb(239, 123, 84),rgb(203, 168, 49) ) */
+      background-image: linear-gradient(to right,  var(--bc-navbar-primary) ,var( --bc-navbar-secondary))
+    }
+  .navbar{
+    transition: transform 0.1s ease-in-out;
+    padding:0;
+    box-shadow:  0px 2px 10px  var(--bc-navbar-shadow) ;
+  }
+    .navbar:hover{
+      transform: translateY(0);
+    }
+    .navbar.show {
+      transform: translateY(0);
+    }
+    .navbar.hide {
+      transform: translateY(-00%); 
+    }
+  .navigation{
+    font-size: x-large;
+    font-weight: bolder;
+  }
+  

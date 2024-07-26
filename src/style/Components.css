@@ -1,0 +1,147 @@
+/* Header.tsx */
+
+header.masthead {
+    position: relative;
+    background-color: #343a40;
+    background: url("../images/bg-masthead.jpg" ) no-repeat center center ;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  header.masthead:before {
+    content: "";
+    position: absolute;
+    background-color: #1c375e;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+  header.masthead h1, header.masthead .h1 {
+    font-size: 2rem;
+  }
+  @media (min-width: 768px) {
+    header.masthead {
+      padding-top: 12rem;
+      padding-bottom: 12rem;
+    }
+    header.masthead h1, header.masthead .h1 {
+      font-size: 3rem;
+    }
+  }
+  
+/* About.tsx */
+.about {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+.about .about-item {
+    max-width: 20rem;
+}
+/* Contact.tsx */
+.contact {
+    position: relative;
+    background-color: #343a40;
+    background: url("../images/bg-masthead.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  .contact:before {
+    content: "";
+    position: absolute;
+    background-color: #1c375e;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+/* Showcase.tsx */
+  .showcase .showcase-text {
+    padding: 3rem;
+  }
+  .showcase .showcase-img {
+    min-height: 30rem;
+    background-size: cover;
+  }
+  @media (min-width: 768px) {
+    .showcase .showcase-text {
+      padding: 7rem;
+    }
+  }
+ 
+ /* Testimonials.tsx */ 
+.testimonials {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  .testimonials .testimonial-item {
+    max-width: 18rem;
+  }
+  .testimonials .testimonial-item img {
+    max-width: 12rem;
+    box-shadow: 0px 5px 5px 0px #adb5bd;
+  }
+/* Footer.tsx */
+footer.footer {
+   padding-top: 4rem;
+   padding-bottom: 4rem;
+}
+/* Price.tsx */
+  .price-list {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .price-list .price-list-item {
+    max-width: 18rem;
+  }
+  .price-list .price-list-item img {
+    max-width: 12rem;
+    box-shadow: 0px 5px 5px 0px #adb5bd;
+  }
+  .menu-body {
+      color: rgb(92, 92, 92);
+    }
+    
+    .menu-section {
+      margin-bottom: 80px;
+    }
+    
+    .menu-section-title {
+      font-family: georgia;
+      font-size: 50px;
+      display: block;
+      font-weight:normal;
+      margin: 20px 0; 
+      text-align: Center;
+    }
+    
+    .menu-item {
+      margin: 35px 0;
+      font-size: 18px;
+    }
+    
+    .menu-item-name{
+      font-family: helvetica;
+      font-weight: bold;
+      border-bottom: 2px dotted rgb(213, 213, 213);
+    }
+    
+    .menu-item-description {
+      font-style: italic;
+      font-size: .9em;
+      line-height: 1.5em;
+    }
+    
+    .menu-item-price{
+      float: right;
+      font-weight: bold;
+      font-family: arial;
+      margin-top: -22px;
+    }
+    
+    /** Source: http://wordpressaholic.com/restaurant-menu-html-and-css-tutorial/ **/
+
+      
