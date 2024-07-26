@@ -1,3 +1,7 @@
+import bgShowcase1 from "../images/bg-showcase-1.jpg";
+import bgShowcase2 from "../images/bg-showcase-2.jpg";
+import bgShowcase3 from "../images/bg-showcase-3.jpg";
+
 function ShowCase() {
   return (
     <>
@@ -6,7 +10,7 @@ function ShowCase() {
           <div
             className="col-lg-6 order-lg-2 text-white showcase-img"
             style={{
-              backgroundImage: "url(./images/bg-showcase-1.jpg)",
+              backgroundImage: "url(../images/bg-showcase-1.jpg)",
             }}
           ></div>
           <div className="col-lg-6 order-lg-1 my-auto showcase-text">

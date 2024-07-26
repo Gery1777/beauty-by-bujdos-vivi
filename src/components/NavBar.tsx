@@ -4,6 +4,9 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
+//Import images
+import logo from "../images/logo.jpg";
+
 let PrevYPosition: GLfloat;
 let CurrentYPosition: GLfloat;
 
@@ -34,7 +37,7 @@ function NavBar() {
     >
       <Navbar.Brand href="#home">
         <img
-          src="./images/logo.png"
+          src={logo}
           style={{
             maxWidth: "100%",
             maxHeight: "40px",

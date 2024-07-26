@@ -1,3 +1,8 @@
+//Import images
+import testimonials1 from "../images/testimonials-1.jpg";
+import testimonials2 from "../images/testimonials-1.jpg";
+import testimonials3 from "../images/testimonials-1.jpg";
+
 function Testimonials() {
   return (
     <div>
@@ -8,7 +13,7 @@ function Testimonials() {
             <div className="testimonial-item mx-auto mb-5 mb-lg-0">
               <img
                 className="img-fluid rounded-circle mb-3"
-                src="./images/cartoon-woman.jpg"
+                src={testimonials1}
                 alt="..."
               />
               <h5>Margaret E.</h5>
@@ -21,7 +26,7 @@ function Testimonials() {
             <div className="testimonial-item mx-auto mb-5 mb-lg-0">
               <img
                 className="img-fluid rounded-circle mb-3"
-                src="./images/cartoon-woman.jpg"
+                src={testimonials2}
                 alt="..."
               />
               <h5>Fred S.</h5>
@@ -35,7 +40,7 @@ function Testimonials() {
             <div className="testimonial-item mx-auto mb-5 mb-lg-0">
               <img
                 className="img-fluid rounded-circle mb-3"
-                src="./images/cartoon-woman.jpg"
+                src={testimonials3}
                 alt="..."
               />
               <h5>Sarah W.</h5>
