@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
 //Import images
-import logo from "../images/logo.jpg";
+import logo from "../images/logo.png";
 
 let PrevYPosition: GLfloat;
 let CurrentYPosition: GLfloat;
