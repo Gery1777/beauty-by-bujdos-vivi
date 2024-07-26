@@ -4,6 +4,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
+import logo from "../images/logo.png";
+
 let PrevYPosition: GLfloat;
 let CurrentYPosition: GLfloat;
 
@@ -51,14 +53,11 @@ function NavBar() {
         <Nav.Link href="#prices">Prices</Nav.Link>
         {/* <Nav.Link href="#testimonials">Testimonials</Nav.Link> */}
         <Nav.Link href="#contact">Contact</Nav.Link>
-        <img src="../src/images/logo.png"></img>
-        <img src="./src/images/logo.png"></img>
-        <img src="src/images/logo.png"></img>
-        <img src="../images/logo.png"></img>
-        <img src="./images/logo.png"></img>
-        <img src="/images/logo.png"></img>
-        <img src="/logo.png"></img>
-        <img src="./logo.png"></img>
+        <img src={logo}></img>
+        <img src="./public/img/logo.png"></img>
+        <img src="../public/img/logo.png"></img>
+        <img src="../img/logo.png"></img>
+        <img src="./img/logo.png"></img>
       </Nav>
     </Navbar>
   );
