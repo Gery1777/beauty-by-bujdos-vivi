@@ -34,3 +34,5 @@ function SlideShow() {
 }
 
 export default SlideShow;
+
+//npm install react-card-carousel
