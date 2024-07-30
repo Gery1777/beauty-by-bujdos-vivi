@@ -1,0 +1,7 @@
+.carousel-image{
+  height:500px;
+}
+
+.carousel.carousel-slider .control-arrow:hover{
+  background: none;
+}

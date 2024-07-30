@@ -8,14 +8,14 @@ import About from "./components/About";
 import ShowCase from "./components/ShowCase";
 import Prices from "./components/Prices";
 import Testimonials from "./components/Testimonials";
-import SlideShow from "./components/SlideShow";
+import ResponsiveCarousel from "./components/ResponsiveCarousel";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 //import CSS Files
 import "./App.css";
 import "./style/NavBar.css";
-import "./style/SlideShow.css";
+import "./style/ResponsiveCarousel.css";
 import "./style/Components.css";
 
 //Test files for trying out things
@@ -75,7 +75,7 @@ const App = () => {
       </section>
       {/* <!-- SlideShow--git> */}
       <section className="text-white text-center" id="slideshow">
-        <SlideShow></SlideShow>
+        <ResponsiveCarousel></ResponsiveCarousel>
       </section>
       {/* <!-- Prices--> */}
       <section className="price-list text-center bg-light" id="prices">
