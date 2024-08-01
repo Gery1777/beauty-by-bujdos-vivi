@@ -4,18 +4,12 @@ import { Carousel } from "react-responsive-carousel";
 
 // Images data
 interface ImageData {
-  all: string[];
   Nails: string[];
   Hair: string[];
   Makeup: string[];
   Events: string[];
 }
 const imageData: ImageData = {
-  all: [
-    "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-  ],
   Nails: [
     "https://www.byrdie.com/thmb/2Lg7FKDftcfDQJepPsvczhtOq5s=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/yournailsbutbetter-ede9fc1f96924daf9ed96e6e2d5fda57.png",
     "https://www.instyle.com/thmb/xweHAUb8ivCC_86Z3fy3RRnPlYE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/020422-Coffin-Nail-Shape-Designs-Lead-2000-49c35703b04c4f78a4a725bb10d1f8a6.jpg",
@@ -40,29 +34,46 @@ const imageData: ImageData = {
     // ... other images for "Events" category
   ],
 };
-
 // Gallery
 function Gallery() {
-  const [images, setImages] = useState(imageData.all);
+  const [images, setImages] = useState(
+    imageData.Nails.concat(
+      imageData.Events,
+      imageData.Hair,
+      imageData.Makeup,
+      imageData.Nails
+    )
+  );
   const [filter, setFilter] = useState("all");
-  const [imageIndex, setImageIndex] = useState(2);
   const handleFilterChange = (value: string) => {
     setFilter(value);
-    handleImageChange(value);
-  };
-  const handleImageChange = (filter: string) => {
-    if (filter == "all") {
-      setImages(imageData.all);
-    } else if (filter == "Nails") {
+    if (value == "all") {
+      setImages(
+        imageData.Nails.concat(
+          imageData.Events,
+          imageData.Hair,
+          imageData.Makeup,
+          imageData.Nails
+        )
+      );
+    } else if (value == "Nails") {
       setImages(imageData.Nails);
-    } else if (filter == "Makeup") {
+    } else if (value == "Makeup") {
       setImages(imageData.Makeup);
-    } else if (filter == "Hair") {
+    } else if (value == "Hair") {
       setImages(imageData.Hair);
-    } else if (filter == "Events") {
+    } else if (value == "Events") {
       setImages(imageData.Events);
     }
   };
+  //Reset to the first picture whenever new category is selected
+  const [selectedItem, setSelectedItem] = useState(0);
+  const [key, setKey] = useState(0);
+  useEffect(() => {
+    setSelectedItem(0);
+    setKey(key + 1);
+  }, [images]);
+
   return (
     <>
       <div style={{ display: "flex" }}>
@@ -111,15 +122,17 @@ function Gallery() {
             </button>
           </div>
           <Carousel
+            key={key}
             showStatus={false}
             autoPlay={true}
             interval={5000}
             infiniteLoop={true}
             transitionTime={1000}
+            selectedItem={selectedItem}
           >
             {images.map((image, index) => (
               <div key={index}>
-                <img src={image} alt={`Image ${index}`} />
+                <img src={image} />
               </div>
             ))}
           </Carousel>
