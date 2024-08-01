@@ -1,0 +1,27 @@
+/* Filters */
+.filter-button{
+    font-size: 18px;
+    border: 1px solid rgb(128,128,128,0.2);
+    border-radius: 5px;
+    text-align: center;
+    color: grey;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover{
+    color: grey;
+    background-color: var(--bc-navbar-primary);
+    transition: transform 0.2s ease;
+    transform: scale(1.1);
+}
+.filter-button.active,.filter-button:focus,.filter-button:active{
+    background-color: var(--bc-navbar-primary)  !important;
+    color:grey  !important;
+    font-weight: bold  !important;
+    border:none  !important;
+    transform: scale(1.1)  !important;
+}
+/* Carousel */
+.carousel .slider-wrapper{
+    height:400px
+}

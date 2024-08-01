@@ -42,9 +42,10 @@ const imageData: ImageData = {
 };
 
 // Gallery
-function Test() {
+function Gallery() {
   const [images, setImages] = useState(imageData.all);
   const [filter, setFilter] = useState("all");
+  const [imageIndex, setImageIndex] = useState(2);
   const handleFilterChange = (value: string) => {
     setFilter(value);
     handleImageChange(value);
@@ -129,4 +130,4 @@ function Test() {
   );
 }
 
-export default Test;
+export default Gallery;

@@ -51,9 +51,9 @@ function NavBar() {
       <Nav className="navigation">
         <Nav.Link href="#about">About</Nav.Link>
         <Nav.Link href="#showcase">Showcase</Nav.Link>
-        <Nav.Link href="#prices">Prices</Nav.Link>
         {/* <Nav.Link href="#testimonials">Testimonials</Nav.Link> */}
-        <Nav.Link href="#slideshow">Gallery</Nav.Link>
+        <Nav.Link href="#gallery">Gallery</Nav.Link>
+        <Nav.Link href="#prices">Prices</Nav.Link>
         <Nav.Link href="#contact">Contact</Nav.Link>
       </Nav>
     </Navbar>

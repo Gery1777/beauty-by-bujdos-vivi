@@ -72,8 +72,8 @@ header.masthead {
     }
   }
  /* SlideShow.tsx */
- .slideshow{
-    padding-top: 2rem;
+ .gallery{
+    padding-top: 4rem;
  }
  /* Testimonials.tsx */ 
 .testimonials {
