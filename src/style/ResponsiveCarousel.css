@@ -1,4 +1,29 @@
-.carousel-image{
-  height:500px;
-}
+/* Filters */
+.filter-button{
+    font-size: 18px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    text-align: center;
+    color: grey;
+    margin-bottom: 30px;
 
+}
+.filter-button:hover{
+    color: grey;
+    background-color: var(--bc-navbar-primary);
+    transition: transform 0.2s ease;
+    transform: scale(1.1);
+}
+.btn-default:active .filter-button:active{
+    background-color: var(--bc-navbar-primary);
+    transform: scale(1.1);
+}
+/* Carrousel */
+.fa-icon{
+ opacity: 0.8;
+}
+.fa-icon:hover{
+  transition: transform 0.1s ease-in-out;
+  transform: scale(1.2);
+  opacity: 1;
+}

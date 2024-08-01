@@ -71,7 +71,10 @@ header.masthead {
       padding: 7rem;
     }
   }
- 
+ /* SlideShow.tsx */
+ .slideshow{
+    padding-top: 2rem;
+ }
  /* Testimonials.tsx */ 
 .testimonials {
     padding-top: 7rem;

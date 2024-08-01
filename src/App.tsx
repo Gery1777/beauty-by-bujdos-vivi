@@ -8,7 +8,7 @@ import About from "./components/About";
 import ShowCase from "./components/ShowCase";
 import Prices from "./components/Prices";
 import Testimonials from "./components/Testimonials";
-import ResponsiveCarousel from "./components/ResponsiveCarousel";
+import Gallery from "./components/ResponsiveCarousel";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -74,11 +74,14 @@ const App = () => {
         <ShowCase></ShowCase>
       </section>
       {/* <!-- SlideShow--git> */}
-      <section className="text-white text-center" id="slideshow">
-        <ResponsiveCarousel></ResponsiveCarousel>
+      <section
+        className="slideshow text-white text-center bg-light"
+        id="slideshow"
+      >
+        <Gallery></Gallery>
       </section>
       {/* <!-- Prices--> */}
-      <section className="price-list text-center bg-light" id="prices">
+      <section className="price-list text-center" id="prices">
         <Prices></Prices>
       </section>
       {/* <!-- Testimonials--> */}
@@ -88,6 +91,9 @@ const App = () => {
       {/* <!-- Contact--git> */}
       <section className="contact text-white text-center" id="contact">
         <Contact></Contact>
+      </section>
+      <section className="price-list text-center bg-light" id="test">
+        <Test></Test>
       </section>
       <footer className="footer bg-light">
         <Footer></Footer>
