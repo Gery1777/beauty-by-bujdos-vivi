@@ -37,12 +37,7 @@ const imageData: ImageData = {
 // Gallery
 function Gallery() {
   const [images, setImages] = useState(
-    imageData.Nails.concat(
-      imageData.Events,
-      imageData.Hair,
-      imageData.Makeup,
-      imageData.Nails
-    )
+    imageData.Nails.concat(imageData.Makeup, imageData.Hair, imageData.Events)
   );
   const [filter, setFilter] = useState("all");
   const handleFilterChange = (value: string) => {
@@ -50,20 +45,18 @@ function Gallery() {
     if (value == "all") {
       setImages(
         imageData.Nails.concat(
-          imageData.Events,
-          imageData.Hair,
           imageData.Makeup,
-          imageData.Nails
+          imageData.Hair,
+          imageData.Events
         )
       );
-    } else if (value == "Nails") {
-      setImages(imageData.Nails);
-    } else if (value == "Makeup") {
-      setImages(imageData.Makeup);
-    } else if (value == "Hair") {
-      setImages(imageData.Hair);
-    } else if (value == "Events") {
-      setImages(imageData.Events);
+    } else if (
+      value == "Nails" ||
+      value == "Makeup" ||
+      value == "Hair" ||
+      value == "Events"
+    ) {
+      setImages(imageData[value]);
     }
   };
   //Reset to the first picture whenever new category is selected

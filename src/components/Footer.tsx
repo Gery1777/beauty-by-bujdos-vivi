@@ -1,3 +1,9 @@
+import {
+  faFacebook,
+  faTiktok,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Footer() {
   return (
     <>
@@ -29,17 +35,26 @@ function Footer() {
             <ul className="list-inline mb-0">
               <li className="list-inline-item me-4">
                 <a href="#home">
-                  <i className="bi-facebook fs-3"></i>
+                  <FontAwesomeIcon
+                    className="fa-2xl"
+                    icon={faFacebook}
+                  ></FontAwesomeIcon>
                 </a>
               </li>
               <li className="list-inline-item me-4">
                 <a href="#!">
-                  <i className="bi-tiktok fs-3"></i>
+                  <FontAwesomeIcon
+                    className="fa-2xl"
+                    icon={faTiktok}
+                  ></FontAwesomeIcon>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#!">
-                  <i className="bi-instagram fs-3"></i>
+                  <FontAwesomeIcon
+                    className="fa-2xl"
+                    icon={faTiktok}
+                  ></FontAwesomeIcon>
                 </a>
               </li>
             </ul>
