@@ -1,4 +1,13 @@
+
+.gallery-container{
+    display:flex;
+}
+    
 /* Filters */
+.filter-container{
+    display:flex;
+    justify-content: space-between
+}
 .filter-button{
     font-size: 18px;
     border: 1px solid rgb(128,128,128,0.2);
@@ -25,3 +34,24 @@
 .carousel .slider-wrapper{
     height:400px
 }
+
+
+/* media */
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .gallery-container{
+        flex-direction: column;
+    }
+        .gallery-container .col-6{
+            width:100% !important
+        }
+    .filter-container {
+        flex-direction: column;
+    }
+    .filter-button.active,.filter-button:focus,.filter-button:active{
+        transform: scale(1)  !important;
+    }
+    .carousel .slider-wrapper{
+        height:300px
+    }
+  }

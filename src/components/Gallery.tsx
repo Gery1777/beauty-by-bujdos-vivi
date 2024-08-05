@@ -69,10 +69,10 @@ function Gallery() {
 
   return (
     <>
-      <div style={{ display: "flex" }}>
-        <div className="col-3" style={{ display: "flex" }}></div>
+      <div className="gallery-container">
+        <div className="col-3"></div>
         <div className="col-6">
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="filter-container">
             <button
               className={`btn btn-small filter-button ${
                 filter === "all" ? "active" : ""

@@ -34,28 +34,35 @@ function NavBar() {
       fixed="top"
       className={`navbar ${navbar ? "show" : "hide"}`}
       id="navbar"
+      collapseOnSelect
+      expand="md"
     >
-      <Navbar.Brand href="#home">
-        <img
-          src={logo}
-          style={{
-            maxWidth: "100%",
-            maxHeight: "40px",
-            marginLeft: "3rem",
-            marginRight: "3rem",
-            scale: "3",
-          }} // Adjust maxHeight as needed
-          className="d-inline-block align-top"
-        />
-      </Navbar.Brand>
-      <Nav className="navigation">
-        <Nav.Link href="#about">About</Nav.Link>
-        <Nav.Link href="#showcase">Showcase</Nav.Link>
-        {/* <Nav.Link href="#testimonials">Testimonials</Nav.Link> */}
-        <Nav.Link href="#gallery">Gallery</Nav.Link>
-        <Nav.Link href="#prices">Prices</Nav.Link>
-        <Nav.Link href="#contact">Contact</Nav.Link>
-      </Nav>
+      <Container fluid>
+        <Navbar.Brand href="#home">
+          <img
+            src={logo}
+            style={{
+              maxWidth: "100%",
+              maxHeight: "40px",
+              marginLeft: "3rem",
+              marginRight: "3rem",
+              scale: "3",
+            }} // Adjust maxHeight as needed
+            className="d-inline-block align-top"
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="navigation">
+            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#showcase">Showcase</Nav.Link>
+            {/* <Nav.Link href="#testimonials">Testimonials</Nav.Link> */}
+            <Nav.Link href="#gallery">Gallery</Nav.Link>
+            <Nav.Link href="#prices">Prices</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 }

@@ -19,11 +19,17 @@
     .navbar.show {
       transform: translateY(0);
     }
-    .navbar.hide {
+    /* .navbar.hide {
       transform: translateY(-00%); 
-    }
+    } */
+  .navbar .container{
+    width:100%;
+    margin: 0;
+  }
+  /* .navbar-brand{
+    margin-left: auto;
+  }  */
   .navigation{
     font-size: x-large;
     font-weight: bolder;
   }
-  
