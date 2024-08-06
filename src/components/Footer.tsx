@@ -53,7 +53,7 @@ function Footer() {
                 <a href="#!">
                   <FontAwesomeIcon
                     className="fa-2xl"
-                    icon={faTiktok}
+                    icon={faInstagram}
                   ></FontAwesomeIcon>
                 </a>
               </li>
