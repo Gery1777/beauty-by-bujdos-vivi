@@ -66,7 +66,31 @@ function Gallery() {
     setSelectedItem(0);
     setKey(key + 1);
   }, [images]);
+  // Custom Arrows
+  const renderArrow = (
+    onClickHandler: () => void,
+    hasNext: boolean,
+    label: string,
+    posOrDirection?: string
+  ) => {
+    if (!hasNext) return null;
+    const pos = posOrDirection
+      ? posOrDirection === "left"
+        ? "prev"
+        : "next"
+      : "next";
 
+    return (
+      <div
+        onClick={onClickHandler}
+        role="button"
+        title={label}
+        className={`custom-arrow custom-arrow-${pos}`}
+      >
+        <i className={`bi bi-chevron-${posOrDirection || "right"}`}></i>
+      </div>
+    );
+  };
   return (
     <>
       <div className="gallery-container">
@@ -115,6 +139,12 @@ function Gallery() {
             </button>
           </div>
           <Carousel
+            renderArrowNext={(onClickHandler) =>
+              renderArrow(onClickHandler, true, "Next", "right")
+            }
+            renderArrowPrev={(onClickHandler) =>
+              renderArrow(onClickHandler, true, "Prev", "left")
+            }
             key={key}
             showStatus={false}
             autoPlay={true}

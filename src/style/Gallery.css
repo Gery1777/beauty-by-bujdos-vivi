@@ -34,10 +34,31 @@
 .carousel .slider-wrapper{
     height:400px
 }
-
-
+.carousel.carousel-slider .control-arrow:hover{
+    background:none;
+}
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10; /* Ensure it's above carousel content */
+    cursor: pointer;
+    opacity:0.5;
+    font-weight: bolder;
+    font-size:x-large;
+    color:#555555;
+    transition: transform 0.1s ease;
+}
+    .custom-arrow:hover{
+        opacity: 1;
+        transform: scale(2);
+    }
+.custom-arrow-next{
+    right: 20px; /* Adjust as needed */
+}
+.custom-arrow-prev{
+    left: 20px; /* Adjust as needed */
+}
 /* media */
-
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
     .gallery-container{
         flex-direction: column;
@@ -46,7 +67,7 @@
             width:100% !important
         }
     .filter-container {
-        flex-direction: column;
+        flex-wrap:wrap
     }
     .filter-button.active,.filter-button:focus,.filter-button:active{
         transform: scale(1)  !important;

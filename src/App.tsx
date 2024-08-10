@@ -35,6 +35,10 @@ const App = () => {
         const sectionTop = section.offsetTop - navbarHeight;
         const sectionBottom = sectionTop + section.clientHeight;
         const sectionId = section.id;
+        // Add visited class to section when it reaches more than a third of the way of the height
+        if (scrollY >= sectionTop - window.innerHeight * 0.67) {
+          section.classList.add("visited");
+        }
         if (scrollY >= sectionTop && scrollY <= sectionBottom) {
           setCurrentSection(sectionId);
           // Find the element with matching data-rr-ui-event-key
