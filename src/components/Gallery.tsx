@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Button from "react-bootstrap/Button";
 
 // Images data
 interface ImageData {
@@ -96,7 +97,7 @@ function Gallery() {
       <div className="gallery-container">
         <div className="col-3"></div>
         <div className="col-6">
-          <div className="filter-container">
+          <div className="filter-container mb-4">
             <button
               className={`btn btn-small filter-button ${
                 filter === "all" ? "active" : ""

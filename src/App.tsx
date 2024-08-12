@@ -25,7 +25,6 @@ import "./style/_Test.css";
 const App = () => {
   const [currentSection, setCurrentSection] = useState("home");
   const sectionRefs = useRef({});
-
   useEffect(() => {
     const handleScroll = () => {
       const navbarHeight = document.getElementById("navbar")!.clientHeight;
@@ -35,8 +34,8 @@ const App = () => {
         const sectionTop = section.offsetTop - navbarHeight;
         const sectionBottom = sectionTop + section.clientHeight;
         const sectionId = section.id;
-        // Add visited class to section when it reaches more than a third of the way of the height
-        if (scrollY >= sectionTop - window.innerHeight * 0.67) {
+        // Add visited class to section when it reaches more than 20% of the way of the height
+        if (scrollY >= sectionTop - window.innerHeight * 0.8) {
           section.classList.add("visited");
         }
         if (scrollY >= sectionTop && scrollY <= sectionBottom) {
@@ -57,7 +56,8 @@ const App = () => {
         }
       });
     };
-
+    // add initial load in case multiple sections are already visible onload
+    window.addEventListener("load", handleScroll);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [currentSection]);
@@ -82,17 +82,14 @@ const App = () => {
         <Gallery></Gallery>
       </section>
       {/* <!-- Prices--> */}
-      <section className="price-list text-center" id="prices">
+      {/* <section className="price-list text-center" id="prices">
         <Prices></Prices>
-      </section>
-      {/* <!-- Testimonials--> */}
-      {/* <section className="testimonials text-center" id="testimonials">
-        <Testimonials></Testimonials>
       </section> */}
-      {/* <!-- Contact--git> */}
-      <section className="contact text-white text-center" id="contact">
-        <Contact></Contact>
+      <section className="price-list text-center" id="prices">
+        <Test></Test>
       </section>
+      {/* <!-- Contact--git> */}
+      <Contact></Contact>
       <footer className="footer bg-light">
         <Footer></Footer>
       </footer>
