@@ -5,7 +5,7 @@ import Modal from "react-bootstrap/Modal";
 interface NotificationModalProps {
   // isOpen: boolean; // Use a clearer prop name
   modalTitle: string;
-  modalMessage: string;
+  modalMessage: string[];
   onClose: () => void; // Optional callback for handling close from parent
 }
 function NotificationModal({
@@ -13,41 +13,23 @@ function NotificationModal({
   modalMessage,
   onClose,
 }: NotificationModalProps) {
-  const [internalIsOpen, setInternalIsOpen] = useState(true); // Maintain internal state for modal visibility
-
-  const handleClose = () => {
-    setInternalIsOpen(false);
-    onClose(); // Optionally call parent's onClose handler if provided
-  };
   return (
     <>
-      <div
-        className="col-8"
-        style={{
-          position: "fixed",
-          background: "white",
-          borderRadius: "10px",
-          top: "30%", //please change it to be correct
-          left: "17%", //please change it to be correct
-          padding: "10px",
-          color: "black",
-          zIndex: "5000",
-        }}
-      >
-        {/* <Modal.Dialog> */}
+      <div className="col-8 modal-container">
         <Modal.Header>
           <Modal.Title>{modalTitle}</Modal.Title>
         </Modal.Header>
         <hr></hr>
         <Modal.Body>
-          <p>{modalMessage}</p>
+          {modalMessage.map((msg) => (
+            <p style={{ margin: "0px" }}>{msg}</p>
+          ))}
         </Modal.Body>
         <Modal.Footer>
-          <button className="btn btn-secondary" onClick={handleClose}>
+          <button className="btn btn-secondary" onClick={onClose}>
             Close
           </button>
         </Modal.Footer>
-        {/* </Modal.Dialog> */}
       </div>
     </>
   );
@@ -75,6 +57,13 @@ function Contact() {
     emailjs.init("0hYc9Bpcy1KNIFrXe");
   }, []);
 
+  function ToggleModal(isOpen: boolean) {
+    const opacityContainer = document.getElementById("opacityContainer")!;
+    isOpen
+      ? opacityContainer.classList.add("opacity-container")
+      : opacityContainer.classList.remove("opacity-container");
+    setShowModal(isOpen);
+  }
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const serviceId = "service_ajzbge9";
@@ -99,13 +88,13 @@ function Contact() {
       //   message: formValues.message,
       // });
       //reset HTML inputs
-      // (document.getElementById("firstName") as HTMLInputElement).value = "";
-      // (document.getElementById("lastName") as HTMLInputElement).value = "";
-      // (document.getElementById("emailAddress") as HTMLInputElement).value = "";
-      // (document.getElementById("phone") as HTMLInputElement).value = "";
-      // (document.getElementById("message") as HTMLTextAreaElement).value = "";
+      (document.getElementById("firstName") as HTMLInputElement).value = "";
+      (document.getElementById("lastName") as HTMLInputElement).value = "";
+      (document.getElementById("emailAddress") as HTMLInputElement).value = "";
+      (document.getElementById("phone") as HTMLInputElement).value = "";
+      (document.getElementById("message") as HTMLTextAreaElement).value = "";
       //alert user that email is sent
-      setShowModal(true);
+      ToggleModal(true);
     } catch (error) {
       console.error(error);
     } finally {
@@ -117,8 +106,12 @@ function Contact() {
       {showModal ? (
         <NotificationModal
           modalTitle="Köszönöm"
-          modalMessage="Üzeneted megkaptam, amint tudok jelentkezem :)"
-          onClose={() => setShowModal(false)}
+          modalMessage={[
+            "Üzeneted megkaptam, amint tudok jelentkezem :)",
+            "Üdv,",
+            "Vivi",
+          ]}
+          onClose={() => ToggleModal(false)}
         ></NotificationModal>
       ) : null}
       <section className="contact text-white text-center" id="contact">

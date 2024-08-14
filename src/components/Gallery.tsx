@@ -94,75 +94,77 @@ function Gallery() {
   };
   return (
     <>
-      <div className="gallery-container">
-        <div className="col-3"></div>
-        <div className="col-6">
-          <div className="filter-container mb-4">
-            <button
-              className={`btn btn-small filter-button ${
-                filter === "all" ? "active" : ""
-              }`}
-              onClick={() => handleFilterChange("all")}
+      <section className="gallery text-white text-center bg-light" id="gallery">
+        <div className="gallery-container">
+          <div className="col-3"></div>
+          <div className="col-6">
+            <div className="filter-container mb-4">
+              <button
+                className={`btn btn-small filter-button ${
+                  filter === "all" ? "active" : ""
+                }`}
+                onClick={() => handleFilterChange("all")}
+              >
+                All
+              </button>
+              <button
+                className={`btn filter-button ${
+                  filter === "Nails" ? "active" : ""
+                }`}
+                onClick={() => handleFilterChange("Nails")}
+              >
+                Nails
+              </button>
+              <button
+                className={`btn filter-button ${
+                  filter === "Makeup" ? "active" : ""
+                }`}
+                onClick={() => handleFilterChange("Makeup")}
+              >
+                Makeup
+              </button>
+              <button
+                className={`btn filter-button ${
+                  filter === "Hair" ? "active" : ""
+                }`}
+                onClick={() => handleFilterChange("Hair")}
+              >
+                Hair
+              </button>
+              <button
+                className={`btn filter-button ${
+                  filter === "Events" ? "active" : ""
+                }`}
+                onClick={() => handleFilterChange("Events")}
+              >
+                Events
+              </button>
+            </div>
+            <Carousel
+              renderArrowNext={(onClickHandler) =>
+                renderArrow(onClickHandler, true, "Next", "right")
+              }
+              renderArrowPrev={(onClickHandler) =>
+                renderArrow(onClickHandler, true, "Prev", "left")
+              }
+              key={key}
+              showStatus={false}
+              autoPlay={true}
+              interval={5000}
+              infiniteLoop={true}
+              transitionTime={1000}
+              selectedItem={selectedItem}
             >
-              All
-            </button>
-            <button
-              className={`btn filter-button ${
-                filter === "Nails" ? "active" : ""
-              }`}
-              onClick={() => handleFilterChange("Nails")}
-            >
-              Nails
-            </button>
-            <button
-              className={`btn filter-button ${
-                filter === "Makeup" ? "active" : ""
-              }`}
-              onClick={() => handleFilterChange("Makeup")}
-            >
-              Makeup
-            </button>
-            <button
-              className={`btn filter-button ${
-                filter === "Hair" ? "active" : ""
-              }`}
-              onClick={() => handleFilterChange("Hair")}
-            >
-              Hair
-            </button>
-            <button
-              className={`btn filter-button ${
-                filter === "Events" ? "active" : ""
-              }`}
-              onClick={() => handleFilterChange("Events")}
-            >
-              Events
-            </button>
+              {images.map((image, index) => (
+                <div key={index}>
+                  <img src={image} />
+                </div>
+              ))}
+            </Carousel>
           </div>
-          <Carousel
-            renderArrowNext={(onClickHandler) =>
-              renderArrow(onClickHandler, true, "Next", "right")
-            }
-            renderArrowPrev={(onClickHandler) =>
-              renderArrow(onClickHandler, true, "Prev", "left")
-            }
-            key={key}
-            showStatus={false}
-            autoPlay={true}
-            interval={5000}
-            infiniteLoop={true}
-            transitionTime={1000}
-            selectedItem={selectedItem}
-          >
-            {images.map((image, index) => (
-              <div key={index}>
-                <img src={image} />
-              </div>
-            ))}
-          </Carousel>
+          <div className="col-3"></div>
         </div>
-        <div className="col-3"></div>
-      </div>
+      </section>
     </>
   );
 }

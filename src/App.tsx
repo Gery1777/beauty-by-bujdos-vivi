@@ -64,35 +64,15 @@ const App = () => {
 
   return (
     <>
+      <div id="opacityContainer" className=""></div>
       <NavBar></NavBar>
-      {/* <!-- Masthead--> */}
-      <header className="masthead" id="home">
-        <Header></Header>
-      </header>
-      {/* <!-- About Grid--> */}
-      <section className="about bg-light text-center" id="about">
-        <About></About>
-      </section>
-      {/* <!-- Image Showcases--> */}
-      <section className="showcase" id="showcase">
-        <ShowCase></ShowCase>
-      </section>
-      {/* <!-- Galery --> */}
-      <section className="gallery text-white text-center bg-light" id="gallery">
-        <Gallery></Gallery>
-      </section>
-      {/* <!-- Prices--> */}
-      {/* <section className="price-list text-center" id="prices">
-        <Prices></Prices>
-      </section> */}
-      <section className="price-list text-center" id="prices">
-        <Test></Test>
-      </section>
-      {/* <!-- Contact--git> */}
+      <Header></Header>
+      <About></About>
+      <ShowCase></ShowCase>
+      <Gallery></Gallery>
+      <Prices></Prices>
       <Contact></Contact>
-      <footer className="footer bg-light">
-        <Footer></Footer>
-      </footer>
+      <Footer></Footer>
     </>
   );
 };

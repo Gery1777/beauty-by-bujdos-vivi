@@ -1,3 +1,12 @@
+.opacity-container{
+  position: fixed;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
 /* sections */
 section{
   opacity: 0;
@@ -68,6 +77,17 @@ header.masthead {
     left: 0;
     opacity: 0.5;
   }
+  .modal-container{
+    position: fixed;
+    background: white;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    color: black;
+    z-index: 1000;
+  }
   @media (max-width: 768px) {
     .contact-row{
       flex-direction: column;
@@ -109,11 +129,48 @@ footer.footer {
    padding-bottom: 4rem;
 }
 /* Price.tsx */
-  .price-list {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+.price-list {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.price-list-item-container{
+  padding:10px;
+  border-radius: 10px;
+  text-align: left;
+  transition:transform 0.2s ease-in;
+}
+.price-list-item-container:hover{
+  padding:10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+  .price-list-item-container.show{
+    transform: scale(1.1);
   }
-  .price-list .price-list-item {
+.price-list-item-description{
+  display:none
+}
+  .price-list-item-description.show{
+    display:block;
+  }
+.product-list-image{
+  width: 100%;
+  height: 12rem;
+  border-radius: 50px;
+}
+.product-list-image-container{
+  display:none
+}
+@media (max-width: 991.98px) {
+  .row-product-list-image-container{
+    display:none
+  }
+  .product-list-image-container{
+    display: block;
+  }
+}
+  /*.price-list .price-list-item {
     max-width: 18rem;
   }
   .price-list .price-list-item img {
@@ -160,7 +217,7 @@ footer.footer {
       font-family: arial;
       margin-top: -22px;
     }
-    
+     */
     /** Source: http://wordpressaholic.com/restaurant-menu-html-and-css-tutorial/ **/
 
       
