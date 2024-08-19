@@ -78,16 +78,16 @@ function Contact() {
     };
 
     try {
-      // setLoading(true);
+      setLoading(true);
       //send email
-      // await emailjs.send(serviceId, templateId, {
-      //   firstName: formValues.firstName,
-      //   lastName: formValues.lastName,
-      //   emailAddress: formValues.emailAddress,
-      //   phone: formValues.phone,
-      //   message: formValues.message,
-      // });
-      //reset HTML inputs
+      await emailjs.send(serviceId, templateId, {
+        firstName: formValues.firstName,
+        lastName: formValues.lastName,
+        emailAddress: formValues.emailAddress,
+        phone: formValues.phone,
+        message: formValues.message,
+      });
+      // reset HTML inputs
       (document.getElementById("firstName") as HTMLInputElement).value = "";
       (document.getElementById("lastName") as HTMLInputElement).value = "";
       (document.getElementById("emailAddress") as HTMLInputElement).value = "";

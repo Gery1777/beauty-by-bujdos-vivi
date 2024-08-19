@@ -34,11 +34,11 @@ const PriceListItem = ({
   return (
     <div
       className={`vstack price-list-item-container ${isExpanded ? "show" : ""}`}
-      onClick={handleExpand}
     >
       <div
         className="hstack price-list-item-header"
         style={{ justifyContent: "space-between" }}
+        onClick={handleExpand}
       >
         <b>{title}</b>
         <p className="m-0">{price.toString()} HUF</p>
